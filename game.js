@@ -12,9 +12,12 @@
   }
 
   Game.prototype = {
+
     draw: function (ctx) {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
+//Draw wall
+      ctx.fillRect(0,0, canvas.width, 5);
+      ctx.fillRect(0, canvas.height-5, canvas.width, 5);
 //Draw paddles
       ctx.fillRect(0, this.paddles[0].centerPos[1]-this.paddles[0].length/2, 5, this.paddles[0].length);
       ctx.strokeRect(this.paddles[1].centerPos[0], this.paddles[1].centerPos[1]-this.paddles[0].length/2, 5, this.paddles[1].length);
@@ -74,7 +77,7 @@
       // }
       this.ball.updatePos();
 
-      if (Math.floor(Math.random()*100) % 7  ===0) {
+      if (Math.floor(Math.random()*100) % 2  ===0) {
         this.paddles[0].changePosition(this.AIPlayer.getMove());
       }
 
@@ -85,7 +88,12 @@
       ctx.fillStyle = "red";
       ctx.textAlign = "center";
       ctx.fillText(result, canvas.width/2, canvas.height/2);
+    },
 
+    resetGame: function () {
+      this.ball.resetPosition();
+      this.paddles[0].resetPosition();
+      this.paddles[1].resetPosition();
     }
   }
     // debugger

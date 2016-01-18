@@ -4,8 +4,10 @@
   }
 
   var Ball = Pong.Ball = function () {
-    this.pos = [document.getElementById('canvas').width/2, Math.floor(Math.random()*document.getElementById('canvas').height+1)];
-    this.velocity = [ 8+(Math.floor(Math.random()*7*(-1+Math.random()*2))), 1+Math.floor(Math.random()*7)];
+    this.pos = [document.getElementById('canvas').width/2, Math.floor(Math.random()*(document.getElementById('canvas').height-20)+10)];
+
+    this.velocity = [ 8+(Math.floor(Math.random()*3*(-1+Math.random()*2))), 5+Math.floor(Math.random()*3)];
+
     this.radius = 10;
     // this.game = game;
   }
@@ -24,14 +26,14 @@
       var upperPoint =  this.pos[1] - this.radius;
       var lowerPoint = this.pos[1] + this.radius;
 
-      return (upperPoint <= 0 || lowerPoint >= document.getElementById('canvas').height)
+      return (upperPoint <= -5 || lowerPoint >= document.getElementById('canvas').height + 5)
     },
 
     collisionWithPaddle: function (paddle) {
       // debugger
-      if (this.pos[0] - paddle.centerPos[0] <= this.radius) {
-        return ( this.pos[1] < (paddle.centerPos[1] + 50) &&
-        this.pos[1] > (paddle.centerPos[1] - 50) )
+      if ((this.pos[0] - paddle.centerPos[0]) <= this.radius) {
+        return ( this.pos[1] < (paddle.centerPos[1] + 55) &&
+        this.pos[1] > (paddle.centerPos[1] - 55) )
       } else {
         return false
       }
@@ -55,7 +57,7 @@
       var vel_y = this.velocity[1];
 
       this.velocity[0] = -vel_x;
-      this.velocity[1] =  vel_y + Math.floor(Math.abs((this.pos[1] - paddlePos)/20));
+      this.velocity[1] =  vel_y + Math.floor(Math.abs((this.pos[1] - paddlePos)/25));
     },
 
     bounceOffWall: function () {

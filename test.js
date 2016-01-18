@@ -15,7 +15,8 @@
     var view = new Pong.GameView(game, ctx);
 
     view.bindKeyHandlers();
-    view.animate(1);
+    view.startGame();
+    // view.animate(1);
 
     game.ball.resetPosition();
     game.paddles[0].resetPosition();

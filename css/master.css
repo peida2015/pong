@@ -1,0 +1,18 @@
+
+body {
+  width: 960px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+}
+
+button {
+  background: black;
+  color: white;
+  padding:15px;
+  border: 3px solid blue;
+}
+
+.center-align {
+  text-align: center;
+}
