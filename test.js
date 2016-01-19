@@ -16,16 +16,7 @@
 
     view.bindKeyHandlers();
     view.startGame();
-    // view.animate(1);
 
-    game.ball.resetPosition();
-    game.paddles[0].resetPosition();
-    game.paddles[1].resetPosition();
-    // }
-
-    // window.setTimeInverval(1000, function () {
-    //   view.animate;
-    // })
     }
   }
 })();

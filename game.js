@@ -84,7 +84,7 @@
     },
 
     showMatchResult: function (ctx, result) {
-      ctx.font="48px Comic Sans MS";
+      ctx.font="48px Courier New";
       ctx.fillStyle = "red";
       ctx.textAlign = "center";
       ctx.fillText(result, canvas.width/2, canvas.height/2);
