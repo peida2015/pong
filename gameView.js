@@ -30,11 +30,11 @@
     },
 
     handleClick: function (event) {
-      if ((event.offsetX >=canvas.width/2-100 && event.offsetX <= canvas.width/2+100) && (event.offsetY >= canvas.height/2 + 70 && event.offsetY <= canvas.height/2 + 110)) {
+      if ((event.offsetX >=canvas.width/2-100 && event.offsetX <= canvas.width/2+100) && (event.offsetY >= canvas.height/2 + 30 + 70 && event.offsetY <= canvas.height/2 + 30 + 110)) {
         this.game.resetGame();
         this.resetCanvas();
         this.startGame();
-      } else if ((event.offsetX >=canvas.width/2-75 && event.offsetX <= canvas.width/2+75) && (event.offsetY >= canvas.height/2 + 150 && event.offsetY <= canvas.height/2 + 190)){
+      } else if ((event.offsetX >=canvas.width/2-75 && event.offsetX <= canvas.width/2+75) && (event.offsetY >= canvas.height/2 + 30 + 150 && event.offsetY <= canvas.height/2 + 30 + 190)){
         canvas.width = canvas.width*0.9;
         this.resetCanvas();
         this.game.resetGame();
@@ -42,7 +42,6 @@
         console.log("clicked harder");
       } else {
         console.log('clicked outside');
-        // canvas.removeEventListener('click', this.handleClick.bind(this), false);
       }
     },
 
@@ -62,16 +61,16 @@
       this.ctx.font="28px Courier New";
       this.ctx.fillStyle = "blue";
       this.ctx.textAlign = "center";
-      this.ctx.fillText("Play Again", canvas.width/2, canvas.height/2 + 100);
-      this.ctx.strokeRect(canvas.width/2-100, canvas.height/2 + 70, 200, 40);
+      this.ctx.fillText("Play Again", canvas.width/2, canvas.height/2 + 30 + 100);
+      this.ctx.strokeRect(canvas.width/2-100, canvas.height/2 + 30 + 70, 200, 40);
     },
 
     showHarder: function () {
       this.ctx.font="28px Courier New";
       this.ctx.fillStyle = "green";
       this.ctx.textAlign = "center";
-      this.ctx.fillText("Harder", canvas.width/2, canvas.height/2 + 180);
-      this.ctx.strokeRect(canvas.width/2-75, canvas.height/2 + 150, 150, 40);
+      this.ctx.fillText("Harder", canvas.width/2, canvas.height/2 + 30 + 180);
+      this.ctx.strokeRect(canvas.width/2-75, canvas.height/2 + 30 + 150, 150, 40);
     },
 
     animate: function (time) {

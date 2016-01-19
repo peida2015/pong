@@ -13,7 +13,9 @@ button {
   border: 3px solid blue;
 }
 canvas {
-  display: inline;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Appacademylogo.png/175px-Appacademylogo.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 p {
   display: inline;

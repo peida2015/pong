@@ -85,9 +85,10 @@
 
     showMatchResult: function (ctx, result) {
       ctx.font="48px Courier New";
-      ctx.fillStyle = "red";
+      ctx.fillStyle = "black";
+      ctx.fontWeight = "700";
       ctx.textAlign = "center";
-      ctx.fillText(result, canvas.width/2, canvas.height/2);
+      ctx.fillText(result, canvas.width/2, canvas.height/2-100);
     },
 
     resetGame: function () {
