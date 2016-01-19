@@ -1,9 +1,9 @@
-[Live](http://peida2015.github.com/pong/pong.html)
+[Live](http://peida2015.github.io/pong/pong.html)
 
 A classic arcade game written in Javascript.  It's a game I spent a lot of time playing after school when I was in middle school.  These are the challenges I encountered several challenges while I coded the game:
--[ ] Detecting collision between ball and paddles
--[ ] Deciding how the ball's velocity changes when it hits the paddle
--[ ] Deciding how the AI player reacts
+- [ ] Detecting collision between ball and paddles
+- [ ] Deciding how the ball's velocity changes when it hits the paddle
+- [ ] Deciding how the AI player reacts
 
 How I solved the problems:
 1. To detect collision, I approximated detection by checking if the center of the ball is within the range of the paddle's length when its outer surface reaches the baseline.  This approximation works fairly well in most cases, but it could fail to detect at some edge cases.
