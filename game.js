@@ -1,5 +1,4 @@
 (function () {
-  // debugger
   if (typeof Pong === "undefined") {
     window.Pong = {};
   }
@@ -58,15 +57,7 @@
     step: function (delta) {
       var baselineHit = this.ball.checkBaseline();
 
-      // if (this.checkMatchWinner() === 0) {
-      //   this.matchWins[0] += 1;
-      //   this.showMatchResult("You lost!")
-      // } else if (this.checkMatchWinner() === 1) {
-      //   this.matchWins[1] += 1;
-      //   this.showMatchResult("You won!")
-      // } else {
         if (typeof baselineHit !== 'undefined') {
-          // debugger
           if (this.ball.collisionWithPaddle(this.paddles[baselineHit])){
 
             this.ball.bounceOffPaddle(this.paddles[baselineHit].centerPos[1]);
@@ -74,7 +65,6 @@
         } else if (this.ball.collionWithWall()) {
           this.ball.bounceOffWall();
         }
-      // }
       this.ball.updatePos();
 
       if (Math.floor(Math.random()*100) % 2  ===0) {
@@ -97,5 +87,4 @@
       this.paddles[1].resetPosition();
     }
   }
-    // debugger
 })();

@@ -9,7 +9,6 @@
     this.velocity = [ 8+(Math.floor(Math.random()*3*(-1+Math.random()*2))), 5+Math.floor(Math.random()*3)];
 
     this.radius = 10;
-    // this.game = game;
   }
 
 
@@ -64,7 +63,6 @@
       this.velocity[1] = - this.velocity[1];
     },
 
-//
     updateVelocity: function (paddle) {
       if (this.collionWithWall()) {
         this.bounceOffWall();
