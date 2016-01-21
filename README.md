@@ -1,4 +1,4 @@
-[Live](http://peida2015.github.io/pong/pong.html)
+##Pong[Live](http://peida2015.github.io/pong/pong.html)
 
 A classic arcade game written in Javascript.  It's a game I spent a lot of time playing after school when I was in middle school.  These are the challenges I encountered several challenges while I coded the game:
 - [ ] Detecting collision between ball and paddles
